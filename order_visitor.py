@@ -17,3 +17,12 @@ class OrderVisitor:
 
     def visit_unknown(self, order):
         return 'Неизвестный статус'
+
+
+if __name__ == "__main__":
+    visitor = OrderVisitor()
+    print(visitor.visit({"status": "pending", "id": 123}))      # "Заказ ожидает обработки"
+    print(visitor.visit({"status": "shipped", "id": 123}))      # "Заказ в пути"
+    print(visitor.visit({"status": "delivered", "id": 123}))    # "Заказ доставлен"
+    print(visitor.visit({"status": "unknown", "id": 123}))      # "Неизвестный статус"
+    print(visitor.visit({"status": "lost", "id": 123}))         # "Неизвестный статус"
