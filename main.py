@@ -1,6 +1,5 @@
 """Main function for fibonacci function."""
 
-
 from fibonacci import fibonacci
 
 
