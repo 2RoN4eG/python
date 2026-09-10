@@ -7,12 +7,15 @@ class OrderVisitor:
         return method(order)
 
     def visit_pending(self, order):
+        """Return order string with pending status"""
         return f'Заказ {order["id"]} ожидает обработки'
 
     def visit_shipped(self, order):
+        """Return order string with shipped status"""
         return f'Заказ {order["id"]} в пути'
 
     def visit_delivered(self, order):
+        """Return order string with delivered status"""
         return f'Заказ {order["id"]} доставлен'
 
     def visit_unknown(self, order):
