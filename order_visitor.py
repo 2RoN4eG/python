@@ -1,24 +1,25 @@
 class OrderVisitor:
     """Order visitor class"""
 
-    def visit(self, order):
+    def visit(self, order: dict) -> str:
         method_name = f'visit_{order["status"]}'
         method = getattr(self, method_name, self.visit_unknown)
         return method(order)
 
-    def visit_pending(self, order):
+    def visit_pending(self, order: dict) -> str:
         """Return order string with pending status"""
         return f'Заказ {order["id"]} ожидает обработки'
 
-    def visit_shipped(self, order):
+    def visit_shipped(self, order: dict) -> str:
         """Return order string with shipped status"""
         return f'Заказ {order["id"]} в пути'
 
-    def visit_delivered(self, order):
+    def visit_delivered(self, order: dict) -> str:
         """Return order string with delivered status"""
         return f'Заказ {order["id"]} доставлен'
 
-    def visit_unknown(self, order):
+    def visit_unknown(self, order: dict) -> str:
+        """Return order string with unknown status"""
         return 'Неизвестный статус'
 
 
