@@ -20,7 +20,7 @@ class OrderVisitor:
 
     def visit_unknown(self, order: dict) -> str:
         """Return order string with unknown status"""
-        return 'Неизвестный статус'
+        return f'Заказ {order["id"]} - неизвестный статус'
 
 
 if __name__ == "__main__":
