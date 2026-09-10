@@ -17,3 +17,4 @@ if __name__ == "__main__":
     process_coordinates((0, 4))
     process_coordinates((5, 0))  # "Точка на оси X: 5"
     process_coordinates((5, 4))  # "Точка в (3, 4)"
+    process_coordinates("some text")
