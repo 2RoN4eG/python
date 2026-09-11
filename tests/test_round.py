@@ -26,7 +26,8 @@ def test_round(value, expected):
     (2.4, 2),
     (2.5, 3),
     (2.6, 3),
-    (3.4, 3)
+    (3.4, 3),
+    (3.5, 4)
 ])
 def test_round_(value, expected):
     from round import round_
