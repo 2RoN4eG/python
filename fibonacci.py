@@ -10,7 +10,8 @@ def fibonacci(number: int):
 
 
 if __name__ == "__main__":
-    """Main function for fibonacci function."""
+    """Main function for fibonacci function.
+    """
     number = int(input("input nuber:"))
 
     for index, value in enumerate(fibonacci(number)):
