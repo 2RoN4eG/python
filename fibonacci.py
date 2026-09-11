@@ -1,6 +1,6 @@
 """Generator for the Fibonacci sequence."""
 
-def fibonacci(number: int) -> int:
+def fibonacci(number: int):
     """Return Fibonacci number."""
 
     lhs, rhs = 0, 1
