@@ -20,7 +20,6 @@ def test_round(value, expected):
     from fibonacci import fibonacci
 
     for _ in fibonacci(value):
-        print(f'index: {value}, number: {_}')
         number = _
 
     assert(number == expected)
