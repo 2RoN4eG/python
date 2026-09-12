@@ -1,7 +1,10 @@
-"""Generator for the Fibonacci sequence."""
+"""Generator for the Fibonacci sequence.
+"""
+
 
 def fibonacci(number: int):
-    """Return Fibonacci number."""
+    """Return Fibonacci sequence number.
+    """
 
     lhs, rhs = 0, 1
     for _ in range(number):
